@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Treino - Veridiane Silvestre</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #fff5f7 100%);
+            color: #2c2c2c;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(219, 112, 147, 0.15);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #d4587f 0%, #c94b6f 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .workout-day {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .day-title {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #ffd6e5;
+        }
+        
+        .day-icon {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .day-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: #d4587f;
+            font-weight: 600;
+        }
+        
+        .exercises-grid {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .exercise {
+            background: linear-gradient(135deg, #fff9fc 0%, #ffffff 100%);
+            border-left: 4px solid #d4587f;
+            padding: 16px 20px;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+        
+        .exercise:hover {
+            box-shadow: 0 4px 12px rgba(212, 88, 127, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .exercise-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: #2c2c2c;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        
+        .exercise-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 6px;
+            justify-content: flex-start;
+        }
+        
+        .detail-item {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .detail-label {
+            font-weight: 500;
+            color: #d4587f;
+        }
+        
+        .exercise-note {
+            font-size: 12px;
+            color: #888;
+            font-style: italic;
+            margin-top: 6px;
+            padding-left: 12px;
+            border-left: 2px solid #ffd6e5;
+            text-align: left;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ffd6e5 20%, #ffd6e5 80%, transparent);
+            margin: 35px auto;
+            max-width: 80%;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #fff9fc 0%, #ffeef8 100%);
+            color: #888;
+            font-size: 13px;
+        }
+        
+        .footer strong {
+            color: #d4587f;
+            font-weight: 600;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                display: block;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+            
+            .exercise:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .day-title h2 {
+                font-size: 22px;
+            }
+            
+            .exercise-name {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Veridiane Silvestre</h1>
+        </div>
+        
+        <div class="content">
+            <!-- Treino 1 -->
+            <div class="workout-day">
+                <div class="day-title">
+                    <span class="day-icon">🍑</span>
+                    <h2>Perna + Glúteo</h2>
+                </div>
+                
+                <div class="exercises-grid">
+                    <div class="exercise">
+                        <div class="exercise-name">Agachamento (com Barra ou na Smith)</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 5</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 15-12-10-8-8</div>
+                        </div>
+                        <div class="exercise-note">Aumentar carga e diminuir repetições</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Extensão de Perna</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 5</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                        <div class="exercise-note">20 segundos descanso entre as séries</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Leg Curl Deitado Unilateral</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 4</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 8-10</div>
+                        </div>
+                        <div class="exercise-note">Dropset última série</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Stiff com Halteres</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 12-15</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Elevação Pélvica Unilateral</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                        <div class="exercise-note">Com Halter</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Peso Morto com Barra</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 4</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Panturrilha na Smith</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 15-20</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <!-- Treino 2 -->
+            <div class="workout-day">
+                <div class="day-title">
+                    <span class="day-icon">💪</span>
+                    <h2>Superior 1</h2>
+                </div>
+                
+                <div class="exercises-grid">
+                    <div class="exercise">
+                        <div class="exercise-name">Lat Pulldown</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 5</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 15-12-10-8-8</div>
+                        </div>
+                        <div class="exercise-note">Aumentar carga e diminuir repetições</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Remada Alta Iso-Lateral</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Remada Iso-Lateral Sentada</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Face Pull</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 12-15</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Elevação Lateral</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 4</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Biceps Curl Barra em W</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Bicep Curl (na polia)</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 12-15</div>
+                        </div>
+                        <div class="exercise-note">Última série Dropset</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <!-- Treino 3 -->
+            <div class="workout-day">
+                <div class="day-title">
+                    <span class="day-icon">✨</span>
+                    <h2>Glúteos + Abdómen</h2>
+                </div>
+                
+                <div class="exercises-grid">
+                    <div class="exercise">
+                        <div class="exercise-name">Búlgaro Smith</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 4</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Elevação Pélvica (Máquina)</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 8-10</div>
+                        </div>
+                        <div class="exercise-note">Pausa de 1 segundo e descida 3 segundos</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Agachamento Sumo com Halter</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 15-20</div>
+                        </div>
+                        <div class="exercise-note">Fazer em cima de 2 Steps</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Kickbacks</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                        <div class="exercise-note">Controlar descida</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Prancha</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Duração:</span> 1-2 minutos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Abdominal na Polia</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Elevação de Pernas Deitada</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 15-20</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <!-- Treino 4 -->
+            <div class="workout-day">
+                <div class="day-title">
+                    <span class="day-icon">🏋️</span>
+                    <h2>Superior 2</h2>
+                </div>
+                
+                <div class="exercises-grid">
+                    <div class="exercise">
+                        <div class="exercise-name">Press Ombro Sentada com Halter</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Front Raise (Dumbbell)</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 4</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                        <div class="exercise-note">Última série Dropset</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Remada Diagonal Unilateral</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 4</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Mariposa</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 12-15</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Aberturas Invertidas na Polia</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 12-15</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Extensão de Tríceps Overhead na Polia</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 4</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 12-15</div>
+                        </div>
+                        <div class="exercise-note">Última série Dropset</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Extensão de Tríceps na Polia Unilateral</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <!-- Treino 5 -->
+            <div class="workout-day">
+                <div class="day-title">
+                    <span class="day-icon">🦵</span>
+                    <h2>Perna</h2>
+                </div>
+                
+                <div class="exercises-grid">
+                    <div class="exercise">
+                        <div class="exercise-name">Belt Squat</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 4</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 8-10</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Leg Press Unilateral</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Panturrilha na Leg Press</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 15-20</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Leg Curl Sentada</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 5</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                        <div class="exercise-note">Pausa de 1 segundo e descida 3 segundos • Última série Dropset</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Stiff Unilateral com Halter</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 10-12</div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Adutora</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 12-15</div>
+                        </div>
+                        <div class="exercise-note">Pausa de 2 segundos no fecho</div>
+                    </div>
+                    
+                    <div class="exercise">
+                        <div class="exercise-name">Abdutora</div>
+                        <div class="exercise-details">
+                            <div class="detail-item"><span class="detail-label">Séries:</span> 3</div>
+                            <div class="detail-item"><span class="detail-label">Repetições:</span> 12-15</div>
+                        </div>
+                        <div class="exercise-note">Pausa de 2 segundos na abertura</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Veridiane Silvestre</strong> · Foco, determinação e resultados</p>
+            <p>Bora Gata! 💪✨</p>
+        </div>
+    </div>
+</body>
+</html>
