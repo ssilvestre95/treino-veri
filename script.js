@@ -65,7 +65,7 @@ const exerciseImages = {
         description: 'Foco total nos glúteos. Contraia fortemente no topo e controle a descida.'
     },
     'sumo com halter': {
-        image: 'https://s8.ezgif.com/tmp/ezgif-8bb021a020be0b6e.gif',
+        image: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDloaGgwa3pvazNjNzRxdGlwOGg1M3E0ZzBkMGhxdmtvbWl4dnZ1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pk4TgnYXJO6hWLNQVU/giphy.gif',
         description: 'Foco nos glúteos e parte interna das coxas. Mantenha o tronco ereto e desça controladamente.'
     },
     'glúteo kickback': {
@@ -197,4 +197,5 @@ document.addEventListener('DOMContentLoaded', function() {
             openModal(this.textContent);
         });
     });
+
 });
